@@ -1,6 +1,18 @@
 body {
-  background-color: darksalmon;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/30/Generic_image_of_asteroid_in_the_Solar_System.jpg");
 }
+
+.Heading{
+  color: brown;
+  font-size: 35px;
+  font-style: italic;
+}
+
+.head{
+  display: flex;
+  justify-content: center;
+}
+
 
 .box {
   height: 500px;
@@ -8,31 +20,25 @@ body {
   border: 5px solid black;
   border-radius: 25%;
   background-color: khaki;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/9e/PSYCHE_%28Asteroid%29.jpg");
 }
-.box2{
-    display: flex;
-    justify-content: center;
-    margin-top: 35px ;
-
- 
-    
-}
-
-.box3{
-    display: flex;
-    justify-content: center;
-    margin-top: 35px;
-    
+.box2 {
+  display: flex;
+  justify-content: center;
 
 }
 
-.box4{
+.box3 {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+
+.box4 {
   display: flex;
   justify-content: space-around;
   margin-top: 25px;
 }
-
-
 
 .main {
   display: flex;
@@ -51,7 +57,7 @@ body {
   font-size: large;
   font-style: italic;
   text-align: center;
-  
+  text-wrap: wrap;
 }
 
 .button {
@@ -65,7 +71,7 @@ body {
   font-style: italic;
 }
 
-.dateTime1{
+.dateTime1 {
   background-color: blanchedalmond;
   font-size: large;
   font-style: italic;
@@ -76,7 +82,7 @@ body {
   border: 2px solid black;
 }
 
-.dateTime2{
+.dateTime2 {
   background-color: blanchedalmond;
   font-size: large;
   font-style: italic;
@@ -86,4 +92,3 @@ body {
   border-radius: 25%;
   border: 2px solid black;
 }
-
