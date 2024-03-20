@@ -25,10 +25,18 @@ button[0].addEventListener("click", (event) => {
   })
     .then((response) => {
       const { data } = response;
-      console.log(data.element_count);
-      screen[0].value = data.element_count;
+
+      console.log(
+        data.near_earth_objects["2015-09-08"][0].estimated_diameter
+          .kilometers
+      );
+      screen[0].value =
+        "The size of Asteriods near to earth" +
+        data.near_earth_objects["2015-09-08"][0].estimated_diameter.kilometers;
     })
     .catch((error) => {
       console.log(error);
     });
 });
+
+// "The size of Asteriods near to earth" + data.near_earth_objects"2015-09-08"[0].estimated_diameter.kilometers;
