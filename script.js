@@ -4,7 +4,7 @@ const dateTime1 = document.getElementsByClassName("dateTime1");
 const dateTime2 = document.getElementsByClassName("dateTime2");
 
 button[0].addEventListener("click", (event) => {
-  screen[0].value = "Loading....";
+  screen[0].innerText = "Following asteroids are near earth";
 
   const inputValue = screen[0].value;
 
@@ -26,17 +26,19 @@ button[0].addEventListener("click", (event) => {
     .then((response) => {
       const { data } = response;
 
-      console.log(
-        data.near_earth_objects["2015-09-08"][0].estimated_diameter
-          .kilometers
-      );
-      screen[0].value =
-        "The size of Asteriods near to earth" +
-        data.near_earth_objects["2015-09-08"][0].estimated_diameter.kilometers;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-});
+      let dateKeys = Object.keys(data.near_earth_objects);
 
-// "The size of Asteriods near to earth" + data.near_earth_objects"2015-09-08"[0].estimated_diameter.kilometers;
+      dateKeys.forEach((element) => {
+        let arrayValue = data.near_earth_objects[element];
+
+        const asteroidNames = [];
+
+        arrayValue.forEach((item) => {
+          asteroidNames.push(item.name);
+        });
+
+        screen[0].append(`on ${element}, ${asteroidNames} were spotted`);
+      });
+    })
+    .catch((error) => {});
+});
